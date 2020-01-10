@@ -1,6 +1,7 @@
 /*	Author: egonz055
  *  Partner(s) Name: 
- *	Lab Section:
+ *
+ *	Lab Section: 
  *	Assignment: Lab #  Exercise #
  *	Exercise Description: [optional - include for your own benefit]
  *
@@ -12,10 +13,25 @@
 #include "simAVRHeader.h"
 #endif
 
+//PA0 = garage door sensor (INPUT)
+//PA1 = light sensor (INPUT)
+//PB0 = LED (OUTPUT)
+
 int main(void) {
     /* Insert DDR and PORT initializations */
+	DDRA = 0x00;
+	PORTA = 0xFF;
+
+	DDRB = 0xFF;
+	PORTB = 0x00;
+
+	unsigned char temporaryValB = 0x00; //Hold B value
+	unsigned char temporaryValA = 0x00; //Hold A value
+
 
     /* Insert your solution below */
+	
+
     while (1) {
 
     }
