@@ -56,9 +56,11 @@ int main(void) {
                 counter--;
         }
 	
+		
+
 	PORTC = counter;
 	}	
-
+	
 	
 		
 
