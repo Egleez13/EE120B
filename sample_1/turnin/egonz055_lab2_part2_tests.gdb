@@ -28,27 +28,27 @@ echo Running all tests..."\n\n
 
 
 test “PINA[1:0]: 00, PORTB0: 0”
-setPINA 0x00
+setPINA 0x01
 continue 2
-expectPORTB 0x00
+expectPORTC 0x03
 checkResult
 
 test “PINA[1:0]: 01, PORTB0: 1”
-setPINA 0x01
+setPINA 0x03
 continue 2
-expectPORTB 0x01
+expectPORTC 0x02
 checkResult
 
 test “PINA[1:0]: 10, PORTB0: 0”
-setPINA 0x02
+setPINA 0x07
 continue 2
-expectPORTB 0x00
+expectPORTC 0x01
 checkResult
 
 test “PINA[1:0]: 11, PORTB0: 0”
-setPINA 0x03
+setPINA 0x0F
 continue 2
-expectPORTB 0x00
+expectPORTC 0x00
 checkResult
 
 # test "PINA: 0x
