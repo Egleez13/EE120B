@@ -25,14 +25,16 @@ int main(void) {
 	DDRB = 0xFF;
 	PORTB = 0x00;
 
-	unsigned char temporaryValB = 0x00; //Hold B value
 	unsigned char temporaryValA = 0x00; //Hold A value
+	unsigned char temporaryValB = 0x00; //Hold B value
 
 
     /* Insert your solution below */
+	while(1) {
+	temporaryValA = PORTA;
 	
-
-    while (1) {
+	if (PORTA = 0x00) {
+	
 
     }
     return 1;
