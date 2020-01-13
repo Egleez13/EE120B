@@ -14,23 +14,27 @@
 
 int main(void) {
     /* Insert DDR and PORT initializations */
-DDRA=0x00;
-DDRB=0xFF;
-PINA=0xFF;
-PORTB=0x00;
-unsigned char g_sensorA0 = 0x00; // B
-unsigned char l_sensorA1 = 0x00; // A
+	DDRA = 0x00;
+	DDRB = 0xFF; 
+	
+	PORTA = 0xFF;
+	PORTB = 0X00;
 
-    /* Insert your solution below */
-    while (1) {
-	if (g_sensorA0 == 0x00 && l_sensorA1 == 0x01)
-	{
+	unsigned char PenA0 = 0x00;
+	unsigned char PenA1 = PINA & 0x02;
+	
+	while (1){
+	PenA0 = PINA & 0x01;
+	PenA1 = PINA & 0X02;
+	
+	if ((PenA1 == 0x0) && (PenA0 == 0x01)) {
 		PORTB = 0x01;
 	}
-
 	else {
-		PORTB = 0x00;
-	} 
-    }
+	PORTB = 0x00;
+	}
+	}		
+		
+
     return 1;
 }
