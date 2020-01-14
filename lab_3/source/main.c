@@ -20,8 +20,21 @@ int main(void) {
 	PORTA = 0xFF;
 	PORTB = 0X00;
 
+	unsigned char PenA0 = 0x00;
+        //unsigned char PenA1 = 0x00;
+        //unsigned char PenA2 = 0x00;
+        //unsigned char PenA3 = 0x00;
+        //unsigned char PenA4 = 0x00;
+        //unsigned char PenA5 = 0x00;
+        //unsigned char PenA6 = 0x00;
+        //unsigned char PenA7 = 0x00;
+
+	unsigned char counter = 0x00;	
+
     /* Insert your solution below */
     while (1) {
+	
+
 
     }
     return 1;
