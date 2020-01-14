@@ -33,7 +33,8 @@ int main(void) {
 	PenA1 = PINA & 0X02;
 	PenA2 = PINA & 0X04;
 	PenA3 = PINA & 0X08;
-	
+	//PenA7 = PINA & 0X80;
+
 	counter = 4;
 
 	if (PenA0 == 0x01)
@@ -56,6 +57,10 @@ int main(void) {
                 counter--;
         }
 	
+	if (counter == 0)
+	{
+		counter = counter | 0x80;
+	}
 		
 
 	PORTC = counter;
