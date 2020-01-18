@@ -15,26 +15,30 @@
 int main(void) {
     /* Insert DDR and PORT initializations */
 	DDRA = 0x00;
-	DDRB = 0xFF; 
+	DDRC = 0xFF; 
 	
 	PORTA = 0xFF;
-	PORTB = 0X00;
+	PORTC = 0X00;
 
-	unsigned char PenA0 = 0x00;
-	unsigned char PenA1 = PINA & 0x02;
+	unsigned char temp_var1 = 0x00;
+	
 	
 	while (1){
-	PenA0 = PINA & 0x01;
-	PenA1 = PINA & 0X02;
-	
-	if ((PenA1 == 0x0) && (PenA0 == 0x01)) {
+		
+	temp_var1 = PORTA; 
+
+	if (temp_var1 == 0x01)
+	{
 		PORTB = 0x01;
 	}
-	else {
-	PORTB = 0x00;
+	
+	else 
+	{
+		PORTB = 0x00;
 	}
-	}		
-		
 
-    return 1;
+	}
+}
+
+	return 1;
 }
