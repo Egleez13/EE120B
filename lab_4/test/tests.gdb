@@ -26,17 +26,15 @@
 echo ======================================================\n
 echo Running all tests..."\n\n
 
-# Example test:
-test "PINA: 0x00, PINB: 0x00 => PORTC: 0"
-# Set inputs
-setPINA 0x00
-setPINB 0x00
-# Continue for several ticks
+test “ ”
+set ::cntA0 = 101
+set state = pressA1
+setPINA 0x02
 continue 2
-# Set expect values
-expectPORTC 0
-# Check pass/fail
+expectPORTB 0x0F
+expect state pressA1
 checkResult
+
 
 # Add tests below
 
