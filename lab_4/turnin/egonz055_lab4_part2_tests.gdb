@@ -27,21 +27,18 @@ echo ======================================================\n
 echo Running all tests..."\n\n
 
 test “1”
-set STATE_MACHINES3 = start
-setPINA 0x04
+set STATE_MACHINES2 = start
+setPINA 0x02
 continue 2
-setPINA 0x80
-continue 2
-expectPORTB 0x00
+expectPORTB 0x06
 checkResult
 
 test “2”
-set STATE_MACHINES3 = start
-setPINA 0x04
+set STATE_MACHINES2 = start
+setPINA 0x03
 continue 2
-expectPORTB 0x02
+expectPORTB 0x00
 checkResult
-expect states push_POUND
 
 
 

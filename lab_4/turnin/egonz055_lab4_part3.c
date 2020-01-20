@@ -12,7 +12,7 @@
 #include "simAVRHeader.h"
 #endif
 
-enum STATE_MACHINES2 {start, wait_state, push_POUND, push_Y, X_state, open_state } state;
+enum STATE_MACHINES3 {start, wait_state, push_POUND, push_Y, X_state, open_state } state;
 
 void stateMachines() 
 {
