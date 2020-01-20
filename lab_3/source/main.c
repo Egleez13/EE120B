@@ -37,10 +37,11 @@ int main(void) {
     /* Insert your solution below */
     while (1) {
 	counter = 0;
-	counter = 
 	
+	count = (PORTA & 0x01) + ((PORTA & 0x02) >> 1) + ((PORTA & 0x04) >> 2) + ((PORTA & 0x08) >> 3) + ((PORTA & 0x10) >> 4) + ((PORTA & 0x20) >> 5) + ((PORTA & 0x40) >> 6) + ((PORTA & 0x80) >> 7)	+ (PORTB & 0x01) + ((PORTB & 0x02) >> 1) + ((PORTB & 0x04) >> 2) + ((PORTB & 0x08) >> 3) + ((PORTB & 0x10) >> 4) + ((PORTB & 0x20) >> 5) + ((PORTB & 0x40) >> 6) + ((PORTB & 0x80) >> 7);
+
+		PORTC = counter;    }
 
 
-    }
     return 1;
 }
